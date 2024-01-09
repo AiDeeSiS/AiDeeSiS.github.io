@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+  <head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style>
+      body {
+        background-color: #fff;
+        margin: 0 auto;
+      }
+
+      form {
+        background-color: #fff;
+        width: 560px;
+        max-width: 80vw;
+        height: 45px;
+        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1), 0 0px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      input {
+        all: unset;
+        font: 20px system-ui;
+        color: #000;
+        height: 100%;
+        width: 100%;
+        padding: 0px 0px 0px 24px;
+      }
+
+      ::placeholder {
+        color: #222;
+        opacity: 0.5;
+      }
+
+      .svg1 {
+        color: #aaa;
+        fill: currentColor;
+        width: 24px;
+        height: 24px;
+        padding: 5px 10px 0px 0px;
+      }
+
+      .svg2 {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+
+      button {
+        all: unset;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        padding: 0px 0px 0px 10px;
+      }
+
+      table {
+        font-family: arial, sans-serif;
+        width: 550px;
+        max-width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 0px;
+      }
+
+      td,
+      th {
+        border: none;
+        text-align: center;
+        padding: 2px;
+      }
+
+      .tr2 {
+        height: 80px;
+        font-family: 'Ubuntu Mono', 'Courier New';
+        font-weight: 600;
+        font-size: 32px;
+        vertical-align: bottom;
+      }
+
+      .tr1 {
+        height: 40px;
+        vertical-align: top;
+        font-size: 13px;
+        font-family: Helvetica, Arial;
+      }
+
+      .table1 {
+        table-layout: fixed;
+        width: 400px;
+        max-width: 75vw;
+      }
+
+      #clock {
+        font-family: system-ui;
+        font-size: 60px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <br><br><br><br><br><br><br>
+    <div>
+      <svg class='svg2' xmlns="http://www.w3.org/2000/svg" width="272" height="92">
+        <path fill="#EA4335" d="M115.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18C71.25 34.32 81.24 25 93.5 25s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44S80.99 39.2 80.99 47.18c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z" />
+        <path fill="#FBBC05" d="M163.75 47.18c0 12.77-9.99 22.18-22.25 22.18s-22.25-9.41-22.25-22.18c0-12.85 9.99-22.18 22.25-22.18s22.25 9.32 22.25 22.18zm-9.74 0c0-7.98-5.79-13.44-12.51-13.44s-12.51 5.46-12.51 13.44c0 7.9 5.79 13.44 12.51 13.44s12.51-5.55 12.51-13.44z" />
+        <path fill="#4285F4" d="M209.75 26.34v39.82c0 16.38-9.66 23.07-21.08 23.07-10.75 0-17.22-7.19-19.66-13.07l8.48-3.53c1.51 3.61 5.21 7.87 11.17 7.87 7.31 0 11.84-4.51 11.84-13v-3.19h-.34c-2.18 2.69-6.38 5.04-11.68 5.04-11.09 0-21.25-9.66-21.25-22.09 0-12.52 10.16-22.26 21.25-22.26 5.29 0 9.49 2.35 11.68 4.96h.34v-3.61h9.25zm-8.56 20.92c0-7.81-5.21-13.52-11.84-13.52-6.72 0-12.35 5.71-12.35 13.52 0 7.73 5.63 13.36 12.35 13.36 6.63 0 11.84-5.63 11.84-13.36z" />
+        <path fill="#34A853" d="M225 3v65h-9.5V3h9.5z" />
+        <path fill="#EA4335" d="m262.02 54.48 7.56 5.04c-2.44 3.61-8.32 9.83-18.48 9.83-12.6 0-22.01-9.74-22.01-22.18 0-13.19 9.49-22.18 20.92-22.18 11.51 0 17.14 9.16 18.98 14.11l1.01 2.52-29.65 12.28c2.27 4.45 5.8 6.72 10.75 6.72 4.96 0 8.4-2.44 10.92-6.14zm-23.27-7.98 19.82-8.23c-1.09-2.77-4.37-4.7-8.23-4.7-4.95 0-11.84 4.37-11.59 12.93z" />
+        <path fill="#4285F4" d="M35.29 41.41V32H67c.31 1.64.47 3.58.47 5.68 0 7.06-1.93 15.79-8.15 22.01-6.05 6.3-13.78 9.66-24.02 9.66C16.32 69.35.36 53.89.36 34.91.36 15.93 16.32.47 35.3.47c10.5 0 17.98 4.12 23.6 9.49l-6.64 6.64c-4.03-3.78-9.49-6.72-16.97-6.72-13.86 0-24.7 11.17-24.7 25.03 0 13.86 10.84 25.03 24.7 25.03 8.99 0 14.11-3.61 17.39-6.89 2.66-2.66 4.41-6.46 5.1-11.65l-22.49.01z" />
+      </svg>
+    </div>
+    <br><br>
+    <div style="width: 560px;max-width: 80vw;margin:0 auto;align-items:center;">
+      <form role="search" id="form">
+        <input type="search" id="query" name="q" placeholder="Search..." aria-label="Search through site content">
+        <button>
+          <svg class='svg1' viewBox="0 0 1024 1024">
+            <path class="path1" d="M848.471 928l-263.059-263.059c-48.941 36.706-110.118 55.059-177.412 55.059-171.294 0-312-140.706-312-312s140.706-312 312-312c171.294 0 312 140.706 312 312 0 67.294-24.471 128.471-55.059 177.412l263.059 263.059-79.529 79.529zM189.623 408.078c0 121.364 97.091 218.455 218.455 218.455s218.455-97.091 218.455-218.455c0-121.364-103.159-218.455-218.455-218.455-121.364 0-218.455 97.091-218.455 218.455z"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <div>
+      <p></p>
+    </div>
+    <table style='width: 550px;max-width: 75vw;align-items:center;'>
+      <tr class='tr2'>
+        <td><svg width='60' height='60'><a href='https://en.wikipedia.org/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='black'>W</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://global.bing.com/?setmkt=en-US&setlang=en'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#00AAEF'>B</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://www.baidu.com/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#2529D8'>B</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://wx.qq.com/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#9de60b'>W</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://translate.yandex.com/?source_lang=en&target_lang=fr'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#ee642c'>Y</text>
+            </a></svg></td>
+      </tr>
+      <tr class='tr1'>
+        <td>Wiki</td>
+        <td>Bing</td>
+        <td>Baidu</td>
+        <td>WeChat</td>
+        <td>Yandex</td>
+      </tr>
+      <tr class='tr2'>
+        <td><svg width='60' height='60'><a href='https://www.britannica.com/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#0e365a'>B</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='http://pubchem.ncbi.nlm.nih.gov/search/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#205493'>P</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://tophub.today/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='crimson'>T</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://www.bilibili.com/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#00aeec'>B</text>
+            </a></svg></td>
+        <td><svg width='60' height='60'><a href='https://www.1jour1actu.com/'>
+              <circle cx='30' cy='30' r='25' fill='rgb(244, 244, 244)' /><text x='22' y='40' fill='#feda2e'>1</text>
+            </a></svg></td>
+      </tr>
+      <tr class='tr1'>
+        <td>Britannica</td>
+        <td>PubChem</td>
+        <td>今日热榜</td>
+        <td>Bilibili</td>
+        <td>1jour1actu</td>
+      </tr>
+    </table>
+    <div id="clock"></div>
+    <br><br>
+    <div>
+      <table class="table1">
+        <tr>
+          <td style="color:#686868;">Los Angels</td>
+          <td style="color:#686868;">Boston</td>
+          <td style="color:#686868;">London</td>
+        </tr>
+        <tr>
+          <td><span style="color:#686868;" id="Los_Angeles"></span></td>
+          <td><span style="color:#686868;" id="Bosdon"></span></td>
+          <td><span style="color:#686868;" id="London"></span></td>
+        </tr>
+      </table>
+      <br>
+      <table class="table1">
+        <tr>
+          <td style="color:#686868;">Paris</td>
+          <td style="color:#686868;">Beijing</td>
+          <td style="color:#686868;">Tokyo</td>
+        </tr>
+        <tr>
+          <td><span style="color:#686868;" id="Paris"></span></td>
+          <td><span style="color:#686868;" id="Beijing"></span></td>
+          <td><span style="color:#686868;" id="Tokyo"></span></td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      // Google search. 
+      const f = document.getElementById('form');
+      const q = document.getElementById('query');
+      const bing = 'https://www.google.com.hk/search?q=';
+
+      function submitted(event) {
+        event.preventDefault();
+        const url = bing + q.value + '';
+        const win = window.open(url, '_blank');
+        win.focus();
+      }
+      f.addEventListener('submit', submitted);
+
+      // Clock. 
+      function showTime() {
+        let time = new Date(Date.now() + 100);
+        let hour = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+        hour = hour < 10 ? "0" + hour : hour;
+        min = min < 10 ? "0" + min : min;
+        sec = sec < 10 ? "0" + sec : sec;
+        let currentTime = hour + ":" +
+          min + ":" + sec;
+        document.getElementById("clock")
+          .innerHTML = currentTime;
+      }
+      showTime();
+
+      // World clock. 
+      const enUS = new Intl.Locale('en-US');
+      const enGB = new Intl.Locale('en-GB');
+      const frFR = new Intl.Locale('fr-FR');
+      const zhCN = new Intl.Locale('zh-CN');
+      const jpJP = new Intl.Locale('jp-JP');
+      const Los_AngelesTZ = enUS.timeZones[16];
+      const BostonTZ = enUS.timeZones[20];
+      const LondonTZ = enGB.timeZones[0];
+      const ParisTZ = frFR.timeZones[0];
+      const BeijingTZ = zhCN.timeZones[0];
+      const TokyoTZ = jpJP.timeZones[0];
+      function worldTime(local) {
+        const time1 = new Date(Date.now() + 100);
+        const currentTime = time1.toLocaleTimeString('fr-FR', {
+          timeZone: local
+        });
+        return (currentTime.slice(0, 5));
+      }
+      function writeWorldClock() {
+        document.getElementById('Los_Angeles').innerHTML = worldTime(Los_AngelesTZ);
+        document.getElementById('Bosdon').innerHTML = worldTime(BostonTZ);
+        document.getElementById('London').innerHTML = worldTime(LondonTZ);
+        document.getElementById('Paris').innerHTML = worldTime(ParisTZ);
+        document.getElementById('Beijing').innerHTML = worldTime(BeijingTZ);
+        document.getElementById('Tokyo').innerHTML = worldTime(TokyoTZ);
+      }
+      writeWorldClock();
+
+      function showAllClocks() {
+        showTime();
+        writeWorldClock();
+      }
+      setInterval(showAllClocks, 200);
+    </script>
+  </body>
+
+</html>
